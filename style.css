@@ -9,12 +9,97 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
+  text-align: center;
+}
+h1 {
+  font-size: 8rem;
+  color: #333333;
+  margin-block: 5rem;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5rem;
+}
+@media (max-width: 630px) {
+  .flex-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #container {
+    margin-bottom: 5rem;
+  }
+  h1 {
+    font-size: 5rem;
+  }
 }
 #container {
   box-sizing: content-box;
-  width: 80%;
+  width: 70%;
   max-width: 500px;
   min-width: 300px;
-  border: 3px solid gray;
-  margin: 4rem auto;
+  box-shadow: rgb(0, 0, 0, 0.24) 0px 3px 8px;
+  display: grid;
+  user-select: none;
+}
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.2rem;
+}
+input[type='color'] {
+  border: none;
+  background-color: inherit;
+  width: 80px;
+  height: 80px;
+}
+input[type='color']::-webkit-color-swatch {
+  border: none;
+  border-radius: 50px;
+  padding: 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+input[type='color']::-webkit-color-swatch-wrapper {
+  border: none;
+  border-radius: 50px;
+  padding: 0;
+}
+.btn {
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  border-width: 1px;
+  border-color: #333333;
+  border-radius: 5px;
+  width: 100%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+input[type='color'], .btn {
+  transition: transform 100ms ease-in-out;
+  cursor: pointer;
+}
+input[type='color']:hover, .btn:hover {
+  transform: scale(1.05);
+}
+#sliderValue {
+  color: #333333;
+  font-size: 2.5rem;
+}
+.active {
+  background-color: #333333;
+  color: white;
+}
+.fa-github {
+  color: #333333;
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
 }

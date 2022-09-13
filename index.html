@@ -8,7 +8,19 @@
   <title>Etch-a-Sketch</title>
 </head>
 <body>
-  <div id="container"></div>
+  <h1>Etch-a-Sketch</h1>
+  <main class="flex-container">
+    <div class="controls">
+      <input type="color" id="colorPicker" value="#333333">
+      <button class="btn active" id="colorBtn">Color mode</button>
+      <button class="btn" id="rainbowBtn">Rainbow mode</button>
+      <button class="btn" id="eraserBtn">Eraser</button>
+      <button class="btn" id="clearBtn">Clear</button>
+      <p id="sliderValue">16 x 16</p>
+      <input type="range" id="slider" value="16" max="64" min="9">
+    </div>
+    <div id="container"></div>
+  </main>
   <script src="script.js"></script>
 </body>
 </html>
